@@ -1,2 +1,5 @@
-@use './abstracts/variables';
-@use './base/reset';
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: sans-serif;
+}
