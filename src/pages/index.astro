@@ -3,6 +3,39 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <h1>DroidUtility</h1>
-  <p>Testing the base layout.</p>
+  <header class="header">
+    <div class="logo">DroidUtility</div>
+    <nav class="nav">
+      <a href="https://github.com/DroidUtility/DroidUtility">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Welcome to DroidUtility</h1>
+  </main>
 </Layout>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .nav a {
+    color: #90caf9;
+    text-decoration: none;
+  }
+
+  .content {
+    padding: 40px 20px;
+    text-align: center;
+  }
+</style>
