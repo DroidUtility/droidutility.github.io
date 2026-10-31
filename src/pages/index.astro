@@ -3,46 +3,28 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <header class="header">
-    <div class="logo">DroidUtility</div>
-    <nav class="nav">
-      <a href="https://github.com/DroidUtility/DroidUtility">GitHub</a>
-    </nav>
-  </header>
-
-<main class="content">
-  <section class="hero">
-    <h1>Take control of your Android</h1>
-    <p>A powerful, non-root utility suite for debloating, shell command execution, and system tweaks.</p>
-    
-    <div class="actions">
-      <a href="https://github.com/DroidUtility/DroidUtility/releases" class="btn primary">Download APK</a>
-      <a href="https://github.com/DroidUtility/DroidUtility" class="btn secondary">View GitHub</a>
-    </div>
-  </section>
-</main>
+  <div class="blank-screen">
+    <header class="minimal-header">
+      <span class="logo">DROIDUTILITY_</span>
+    </header>
+  </div>
+</Layout>
 
 <style>
-  .header {
+  .blank-screen {
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 2px solid #333;
+    flex-direction: column;
+  }
+
+  .minimal-header {
+    padding: 24px 40px;
+    border-bottom: 1px solid #d0d0d0;
   }
 
   .logo {
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  .nav a {
-    color: #90caf9;
-    text-decoration: none;
-  }
-
-  .content {
-    padding: 40px 20px;
-    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
   }
 </style>
