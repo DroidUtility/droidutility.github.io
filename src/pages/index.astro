@@ -3,59 +3,388 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
+  <!-- Header -->
   <header class="header">
-    <div class="container">
-      <div class="logo">
-        <img src="https://api.iconify.design/mdi:android.svg?color=%2390caf9" alt="Logo" width="40" height="40" />
+    <div class="container header-content">
+      <a href="/" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+          <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.3-.16-.68-.04-.84.26l-1.86 3.22c-1.45-.62-3.06-.96-4.78-.96-1.72 0-3.33.34-4.78.96L5.06 5.71c-.16-.3-.54-.42-.84-.26-.3.16-.42.54-.26.85l1.84 3.18C2.6 11.24.36 14.75 0 18.9h24c-.36-4.15-2.6-7.66-6.4-9.42zM7.5 16.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
         <span>DroidUtility</span>
-      </div>
+      </a>
       <nav class="nav">
         <a href="#features">Features</a>
-        <a href="https://github.com/DroidUtility/DroidUtility" target="_blank">GitHub</a>
+        <a href="#download">Download</a>
+        <a href="https://github.com/DroidUtility/DroidUtility" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> GitHub
+        </a>
       </nav>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <div class="badge">No root required • Powered by Shizuku</div>
-      <h1><span>DroidUtility</span></h1>
-      <p>A powerful Android utility suite for debloating, shell command execution, and device management.</p>
+      <div class="badge"><span class="dot"></span> No root required • Powered by Shizuku</div>
+      <h1>Take control of your <span class="gradient-text">Android</span>.</h1>
+      <p>A powerful, non-root utility suite for debloating, shell command execution, and system tweaks. Designed for mobile-first developers.</p>
+      
+      <div class="hero-buttons">
+        <a href="https://github.com/DroidUtility/DroidUtility/releases" class="btn btn-primary">
+          <i class="fab fa-android"></i> Download APK
+        </a>
+        <a href="https://github.com/DroidUtility/DroidUtility" class="btn btn-outline" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View Source
+        </a>
+      </div>
     </div>
   </section>
 
-  <section class="features" id="features">
-    <div class="container grid">
-      <div class="card">
-        <h3>Shell Terminal</h3>
-        <p>Run shell commands through Shizuku with real-time output.</p>
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Everything you need</h2>
+        <p>One app to manage, optimize, and customize your device.</p>
       </div>
-      <div class="card">
-        <h3>Debloat Manager</h3>
-        <p>Browse installed apps and uninstall or disable with one tap.</p>
+      
+      <div class="grid">
+        <div class="card">
+          <div class="icon-wrapper"><i class="fas fa-terminal"></i></div>
+          <h3>True Terminal</h3>
+          <p>Powered by a custom native engine (libghostty-vt) with full ANSI rendering and interactive shell support.</p>
+        </div>
+        
+        <div class="card">
+          <div class="icon-wrapper"><i class="fas fa-broom"></i></div>
+          <h3>Debloat Manager</h3>
+          <p>Remove bloatware safely using the Universal Android Debloater list. Uninstall system apps with one tap.</p>
+        </div>
+        
+        <div class="card">
+          <div class="icon-wrapper"><i class="fas fa-sliders-h"></i></div>
+          <h3>System Tweaks</h3>
+          <p>Apply performance and battery optimizations directly from the app using Shizuku privileges.</p>
+        </div>
+        
+        <div class="card">
+          <div class="icon-wrapper"><i class="fas fa-palette"></i></div>
+          <h3>Material 3 UI</h3>
+          <p>Modern, dynamic design with full Dark, Light, and AMOLED theme support, plus custom accent colors.</p>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Download CTA -->
+  <section id="download" class="section cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to optimize your device?</h2>
+        <p>Join 700+ users who have already debloated and optimized their Android phones.</p>
+        <a href="https://github.com/DroidUtility/DroidUtility/releases" class="btn btn-primary">
+          Get the latest release
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#90caf9">
+          <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.3-.16-.68-.04-.84.26l-1.86 3.22c-1.45-.62-3.06-.96-4.78-.96-1.72 0-3.33.34-4.78.96L5.06 5.71c-.16-.3-.54-.42-.84-.26-.3.16-.42.54-.26.85l1.84 3.18C2.6 11.24.36 14.75 0 18.9h24c-.36-4.15-2.6-7.66-6.4-9.42zM7.5 16.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+        <span>DroidUtility</span>
+      </div>
+      <p class="copyright">© 2026 DroidUtility. Built for the Android community.</p>
+      <div class="footer-links">
+        <a href="https://github.com/DroidUtility/DroidUtility/blob/main/LICENSE">MIT License</a>
+      </div>
+    </div>
+  </footer>
 </Layout>
 
-<style>
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-  .header { padding: 18px 0; border-bottom: 1px solid #2a2a2a; background: #121212; }
-  .header .container { display: flex; justify-content: space-between; align-items: center; }
-  .logo { display: flex; align-items: center; gap: 12px; color: #fff; font-weight: 800; font-size: 1.25rem; }
-  .nav { display: flex; gap: 18px; }
-  .nav a { font-weight: 500; color: #aaa; }
-  .nav a:hover { color: #90caf9; text-decoration: none; }
-  
-  .hero { padding: 100px 0 70px; text-align: center; background: linear-gradient(180deg, #1a1a3a 0%, #0d0d0d 100%); }
-  .hero .badge { display: inline-block; color: #90caf9; padding: 6px 16px; font-size: 0.82rem; font-weight: 700; margin-bottom: 22px; border: 1px solid #90caf9; }
-  .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 16px; }
-  .hero h1 span { color: #90caf9; }
-  .hero p { font-size: 1.12rem; color: #b0b0b0; max-width: 720px; margin: 0 auto; }
+<style lang="scss">
+  // Variables
+  $bg: #0d0d0d;
+  $surface: #121212;
+  $primary: #90caf9;
+  $text: #e8e8e8;
+  $text-muted: #a0a0a0;
+  $border: #2a2a2a;
 
-  .features { padding: 82px 0; background: #121212; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
-  .card { background: #1e1e1e; padding: 26px; border: 1px solid #2a2a2a; }
-  .card h3 { color: #fff; margin-bottom: 8px; }
-  .card p { color: #b0b0b0; }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(13, 13, 13, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.25rem;
+      text-decoration: none;
+      
+      svg { color: $primary; }
+    }
+
+    .nav {
+      display: flex;
+      gap: 24px;
+      
+      a {
+        color: $text-muted;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: color 0.2s;
+        text-decoration: none;
+
+        &:hover { color: $primary; }
+      }
+    }
+  }
+
+  /* Hero */
+  .hero {
+    padding: 120px 0 80px;
+    text-align: center;
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 100px;
+      background: rgba(144, 202, 249, 0.1);
+      border: 1px solid rgba(144, 202, 249, 0.2);
+      color: $primary;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        background: $primary;
+        border-radius: 50%;
+        box-shadow: 0 0 10px $primary;
+      }
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+
+      .gradient-text {
+        background: linear-gradient(135deg, $primary, #80cbc4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    p {
+      font-size: 1.15rem;
+      color: $text-muted;
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+
+    &.btn-primary {
+      background: $primary;
+      color: #000;
+      box-shadow: 0 4px 20px rgba(144, 202, 249, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 24px rgba(144, 202, 249, 0.4);
+      }
+    }
+
+    &.btn-outline {
+      background: transparent;
+      color: $text;
+      border: 1px solid $border;
+
+      &:hover {
+        border-color: $primary;
+        color: $primary;
+      }
+    }
+  }
+
+  /* Sections */
+  .section {
+    padding: 80px 0;
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+      p {
+        color: $text-muted;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  /* Grid & Cards */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background: rgba(30, 30, 30, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 32px;
+    transition: transform 0.2s, border-color 0.2s;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(144, 202, 249, 0.3);
+    }
+
+    .icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(144, 202, 249, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      
+      i {
+        font-size: 20px;
+        color: $primary;
+      }
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    p {
+      color: $text-muted;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+
+  /* CTA Section */
+  .cta-section {
+    .cta-box {
+      background: linear-gradient(135deg, rgba(144, 202, 249, 0.1), rgba(128, 203, 196, 0.05));
+      border: 1px solid rgba(144, 202, 249, 0.2);
+      border-radius: 24px;
+      padding: 60px 24px;
+      text-align: center;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+      }
+      p {
+        color: $text-muted;
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  /* Footer */
+  .footer {
+    border-top: 1px solid $border;
+    padding: 40px 0;
+    margin-top: 60px;
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+    .copyright {
+      color: $text-muted;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a {
+      color: $text-muted;
+      font-size: 0.9rem;
+      margin: 0 8px;
+
+      &:hover { color: $primary; }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header .nav { display: none; } /* Hide nav on mobile for simplicity */
+    .hero { padding: 80px 0 60px; }
+    .hero-buttons { flex-direction: column; width: 100%; }
+    .btn { width: 100%; justify-content: center; }
+  }
 </style>
