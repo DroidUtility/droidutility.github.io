@@ -5,21 +5,30 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
   <div class="blank-screen">
     <header class="minimal-header">
-      <span class="logo">DROIDUTILITY_</span>
+      <div class="container">
+        <span class="logo">DROIDUTILITY_</span>
+      </div>
     </header>
   </div>
 </Layout>
 
 <style>
   .blank-screen {
-    min-height: 50vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
 
   .minimal-header {
-    padding: 24px 32px;
+    padding: 24px 0;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
     border-bottom: 1px solid #d0d0d0;
+    padding-bottom: 24px;
   }
 
   .logo {
