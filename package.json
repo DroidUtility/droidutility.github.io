@@ -1,0 +1,15 @@
+{
+  "name": "droidutility-website",
+  "type": "module",
+  "version": "0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}
