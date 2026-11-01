@@ -5,13 +5,13 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
   <div class="page-wrapper">
     
-    <!-- Header: Logo Left, Nav Right -->
+    <!-- Header -->
     <header class="header">
       <a href="/" class="logo">DROIDUTILITY</a>
       <nav class="nav">
-        <a href="/features">Features</a>
-        <a href="https://github.com/DroidUtility/DroidUtility" target="_blank">GitHub</a>
-        <a href="https://github.com/DroidUtility/DroidUtility/releases" class="btn-download">Download</a>
+        <a href="/features/features">Features</a>
+        <a href="https://github.com/DroidUtility/DroidUtility" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://github.com/DroidUtility/DroidUtility/releases" class="btn-download"><i class="fas fa-download"></i> Download</a>
       </nav>
     </header>
 
@@ -23,41 +23,46 @@ import Layout from '../layouts/Layout.astro';
         and optimize your device using Shizuku.
       </p>
 
-      <!-- Action / Download Block (No more terminal clone) -->
-      <div class="action-block">
-        <div class="action-tabs">
-          <span class="active">Download APK</span>
+      <!-- Clean Action Row -->
+      <div class="action-row">
+        <a href="https://github.com/DroidUtility/DroidUtility/releases" class="action-card">
+          <i class="fab fa-android"></i>
+          <span>Download APK</span>
+        </a>
+        <a href="https://github.com/DroidUtility/DroidUtility" target="_blank" class="action-card">
+          <i class="fab fa-github"></i>
           <span>Source Code</span>
+        </a>
+        <a href="/features/features" class="action-card">
+          <i class="fas fa-book"></i>
           <span>Read Docs</span>
-        </div>
-        <div class="action-content">
-          <div class="download-info">
-            <span class="version">Latest: v1.0.5-beta.6</span>
-            <a href="https://github.com/DroidUtility/DroidUtility/releases" class="action-btn">Get it on GitHub</a>
-          </div>
-        </div>
+        </a>
       </div>
     </main>
 
-    <!-- NEW: Features Grid -->
+    <!-- Icon-Based Features Grid -->
     <section class="features-grid">
       <div class="feature-box">
-        <h3>01 / Debloat</h3>
+        <i class="fas fa-broom"></i>
+        <h3>Debloat</h3>
         <p>Remove system apps safely using the UAD list. No root required.</p>
       </div>
       <div class="feature-box">
-        <h3>02 / Terminal</h3>
+        <i class="fas fa-terminal"></i>
+        <h3>Terminal</h3>
         <p>A native terminal engine with full ANSI rendering and interactive prompts.</p>
       </div>
       <div class="feature-box">
-        <h3>03 / Tweaks</h3>
+        <i class="fas fa-sliders-h"></i>
+        <h3>Tweaks</h3>
         <p>Apply system-level performance and battery optimizations with one tap.</p>
       </div>
     </section>
 
-    <!-- Large Visual Area (The dark box) -->
+    <!-- Large Visual Area -->
     <section class="visual-area">
       <div class="visual-placeholder">
+        <i class="fab fa-android" style="font-size: 4rem; margin-bottom: 16px; color: #333;"></i>
         <h2>DROIDUTILITY</h2>
         <p>[ App Screenshots Coming Soon ]</p>
       </div>
@@ -77,9 +82,9 @@ import Layout from '../layouts/Layout.astro';
   .header { display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; border-bottom: 1px solid #d0d0d0; }
   .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -1px; color: #0a0a0a; text-decoration: none; }
   .nav { display: flex; align-items: center; gap: 24px; font-size: 0.85rem; font-weight: 600; }
-  .nav a { color: #666; text-decoration: none; transition: color 0.2s; }
+  .nav a { color: #666; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
   .nav a:hover { color: #0a0a0a; }
-  .btn-download { background: #0a0a0a; color: #f2f2f2 !important; padding: 8px 16px; border: 1px solid #0a0a0a; transition: background 0.2s; }
+  .btn-download { background: #0a0a0a; color: #f2f2f2 !important; padding: 8px 16px; border: 1px solid #0a0a0a; display: flex; align-items: center; gap: 6px; }
   .btn-download:hover { background: #333; }
 
   /* Hero */
@@ -87,26 +92,27 @@ import Layout from '../layouts/Layout.astro';
   .hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 600; line-height: 1.1; letter-spacing: -2px; margin-bottom: 24px; }
   .subtitle { font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 40px; max-width: 600px; }
 
-  /* Action Block (Replaces Code Block) */
-  .action-block { max-width: 700px; border: 1px solid #d0d0d0; background: #eaeaea; }
-  .action-tabs { display: flex; border-bottom: 1px solid #d0d0d0; padding: 0 16px; background: #e0e0e0; }
-  .action-tabs span { padding: 10px 16px; font-size: 0.75rem; color: #666; cursor: pointer; border-bottom: 2px solid transparent; }
-  .action-tabs span.active { color: #0a0a0a; border-bottom-color: #0a0a0a; font-weight: 600; }
-  .action-content { padding: 20px 16px; background: #eaeaea; }
-  .download-info { display: flex; justify-content: space-between; align-items: center; }
-  .version { font-size: 0.85rem; color: #555; font-weight: 600; }
-  .action-btn { background: #0a0a0a; color: #fff; text-decoration: none; padding: 10px 20px; font-size: 0.85rem; font-weight: 600; }
-  .action-btn:hover { background: #333; }
+  /* Action Row (Replaces terminal block) */
+  .action-row { display: flex; gap: 16px; flex-wrap: wrap; }
+  .action-card { 
+    display: flex; align-items: center; gap: 12px;
+    padding: 16px 24px; border: 1px solid #d0d0d0;
+    text-decoration: none; color: #0a0a0a; font-weight: 600; font-size: 0.9rem;
+    transition: all 0.2s; background: transparent;
+  }
+  .action-card i { font-size: 1.2rem; }
+  .action-card:hover { background: #0a0a0a; color: #f2f2f2; }
 
-  /* New Features Grid */
+  /* Features Grid */
   .features-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid #d0d0d0; }
   .feature-box { padding: 40px; border-right: 1px solid #d0d0d0; }
   .feature-box:last-child { border-right: none; }
+  .feature-box i { font-size: 1.5rem; margin-bottom: 16px; display: block; color: #0a0a0a; }
   .feature-box h3 { font-size: 1rem; font-weight: 800; margin-bottom: 12px; }
   .feature-box p { font-size: 0.85rem; color: #555; line-height: 1.6; }
 
   /* Visual Area */
-  .visual-area { flex-grow: 1; background: #0a0a0a; padding: 40px; display: flex; align-items: center; justify-content: center; }
+  .visual-area { flex-grow: 1; background: #0a0a0a; padding: 60px 40px; display: flex; align-items: center; justify-content: center; }
   .visual-placeholder { text-align: center; color: #333; }
   .visual-placeholder h2 { font-size: 3rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 8px; color: #222; }
   .visual-placeholder p { font-size: 0.9rem; color: #222; }
@@ -114,6 +120,7 @@ import Layout from '../layouts/Layout.astro';
   @media (max-width: 768px) {
     .features-grid { grid-template-columns: 1fr; }
     .feature-box { border-right: none; border-bottom: 1px solid #d0d0d0; }
-    .download-info { flex-direction: column; gap: 16px; align-items: flex-start; }
+    .action-row { flex-direction: column; }
+    .action-card { justify-content: center; }
   }
 </style>
