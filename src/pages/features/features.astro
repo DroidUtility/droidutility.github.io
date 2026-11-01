@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <div class="page-wrapper">
+    
+    <!-- Header (Linking back to home) -->
+    <header class="minimal-header">
+      <div class="container header-content">
+        <a href="/" class="logo">DROIDUTILITY_</a>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/features" class="active">Features</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container content">
+      <h1 class="page-title">Features.</h1>
+      <p class="page-subtitle">Everything you need to take control of your Android device, without root.</p>
+
+      <div class="features-list">
+        
+        <div class="feature-item">
+          <span class="feature-number">01</span>
+          <div class="feature-text">
+            <h2>Debloat Manager</h2>
+            <p>Powered by the Universal Android Debloater (UAD) list. Remove system apps safely with clear safety ratings (Recommended, Advanced, Expert, Unsafe).</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <span class="feature-number">02</span>
+          <div class="feature-text">
+            <h2>Interactive Terminal</h2>
+            <p>A fully functional terminal environment running via Shizuku. Powered by a custom native engine (libghostty-vt) for full ANSI rendering.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <span class="feature-number">03</span>
+          <div class="feature-text">
+            <h2>System Tweaks</h2>
+            <p>Apply performance and battery optimizations directly from the app. Disable animations, force dark mode, and more.</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+</Layout>
+
+<style>
+  .page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Reuse your existing container style */
+  .container {
+    max-width: 1050px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header Styles */
+  .minimal-header {
+    padding: 24px 0;
+    margin-bottom: 60px;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d0d0d0;
+    padding-bottom: 24px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 650;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    color: #0a0a0a;
+  }
+
+  .nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .nav a:hover, .nav a.active {
+    color: #0a0a0a;
+  }
+
+  /* Page Content */
+  .content {
+    flex-grow: 1;
+  }
+
+  .page-title {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 80px;
+    max-width: 600px;
+  }
+
+  /* Feature List */
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .feature-item {
+    display: flex;
+    gap: 32px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d0d0d0;
+  }
+
+  .feature-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #d0d0d0;
+  }
+
+  .feature-text h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .feature-text p {
+    color: #444;
+    line-height: 1.6;
+    max-width: 700px;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .feature-item {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .page-title {
+      font-size: 2.5rem;
+    }
+  }
+</style>
